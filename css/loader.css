@@ -1,0 +1,50 @@
+#bodyLoader {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 25vh;
+}
+
+.loader {
+    height: 50px;
+    transform-origin: bottom center;
+    animation: rotate 2s linear infinite;
+    margin: 0;
+    padding: 0;
+}
+
+.circle {
+    display: inline-block;
+    background-color: #000033;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    transform: scale(0);
+    animation: grow 1.5s linear infinite;
+    margin: -7px;
+}
+
+.circle:nth-child(2) {
+    background-color: #ff884d;
+    animation-delay: 0.75s;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes grow {
+    50% {
+        transform: scale(1)
+    }
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+}
