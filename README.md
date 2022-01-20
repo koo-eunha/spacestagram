@@ -1,6 +1,6 @@
 # Spacestagram
 
-This project was done for a frontend developer intern challenge at Shopify for my application.
+This project was created for the Frontend Developer Intern Challenge at Shopify for my application.
 This mobile-friendly app displays photos from NASA's Astronomy Picture of the Day (APOD) API on a social-media-like platform.
 Users can like/unlike photos and use a datepicker to specify the range of dates that they want to see photos of.
 The default screen displays today's image only.
