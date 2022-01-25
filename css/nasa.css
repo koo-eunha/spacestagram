@@ -119,7 +119,7 @@ article p {
   border-top: 10px solid transparent;
 }
 .custom-field input {
-  border: 3px solid #ccc;
+  border: 2px solid #ccc;
   -webkit-appearance: none;
   -ms-appearance: none;
   -moz-appearance: none;
@@ -155,8 +155,11 @@ article p {
     width: -moz-fit-content;
     width: fit-content;
 }
+.custom-field input:not(:placeholder-shown) {
+    border: 2px solid #222;
+}
 .custom-field input:focus {
-    border: 3px solid #ff884d;
+    border: 2px solid #ff884d;
 }
 .custom-field input:focus + .label {
     color: #ff884d;
