@@ -1,107 +1,164 @@
-* {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 body {
-    background-color: #f3f3f3;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    justify-content: center;
-    align-items: center;
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
 }
 .float {
-    float: left;
+  float: left;
 }
 .fixedTop {
-    position: fixed;
-    top: 0;
-    max-width: 600px;
-    width: 100%;
+  position: fixed;
+  top: 0;
+  max-width: 614px;
+  width: 100%;
 }
 .fixedBottom {
-    position: fixed;
-    bottom: 0;
-    max-width: 600px;
-    width: 100%;
+  position: fixed;
+  bottom: 0;
+  max-width: 614px;
+  width: 100%;
 }
 /* header --------------------------------- */
 header {
-    padding: 0 10px;
-    background-color: #f3f3f3;
-    border-bottom: 1px solid #ccc
+  padding: 10px;
+  background-color: #f3f3f3;
+  border-bottom: 1px solid #ccc;
 }
 header h1 {
-    font-size: 22px;
-    margin-bottom: 0;
-    font-family: 'Lato', sans-serif;
+  font-size: 22px;
+  margin-bottom: 0;
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
 }
 header p {
-    font-size: 11px;
-    margin-top: 5px;
-    color: #555;
-    font-family: 'Lato', sans-serif;
+  font-size: 11px;
+  margin-top: 5px;
+  margin-bottom: 0;
+  color: #555;
+  font-family: "Lato", sans-serif;
 }
 /* photos --------------------------------- */
 #container {
-    max-width: 600px;
-    display: contents;  
-  }
+  max-width: 614px;
+  display: contents;
+}
 #imageSpace {
-    margin-top: 90px;
-    max-width: 600px;
+  margin-top: 80px;
+  max-width: 614px;
 }
 img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px 10px 0 0;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
 }
 section {
-    background-color: white;
-    margin: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+  background-color: white;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
 }
 article {
-    padding: 15px;
+  padding: 15px;
 }
 article h2 {
-    font-size: 14px;
-    margin: 0;
-    font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
 }
 article h3 {
-    font-size: 12px;
-    margin-top: 3px;
-    color: #888;
-    font-weight: 600;
-    font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  margin-top: 3px;
+  color: #888;
+  font-weight: 600;
+  font-family: "Lato", sans-serif;
 }
 article p {
-    font-size: 12px;
-    margin-bottom: 0;
-    font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  margin-bottom: 0;
+  font-family: "Lato", sans-serif;
 }
 .like {
-    margin: 5px 15px 15px 15px;
-    background-image: url("../icons/heart.svg");
-    background-size: cover;
-    background-color: white;
-    width: 25px;
-    height: 25px;
-    border: none;
+  margin: 5px 15px 15px 15px;
+  background-image: url("../icons/heart.svg");
+  background-size: cover;
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  border: none;
 }
 .selected {
-    background-image: url("../icons/heart-fill.svg");
+  background-image: url("../icons/heart-fill.svg");
 }
-
 /* datepicker --------------------------------- */
 #datepicker {
-    background-color: white;
-    border-top: 1px solid #ccc
+  background-color: white;
+  border-top: 1px solid #ccc;
 }
-
-/* footer --------------------------------- */
-footer {
-    padding-bottom: 80px;
+.flex-child {
+  flex: 1;
+  margin: 0 10px;
+}
+.flex-parent {
+  display: flex;
+  flex-wrap: wrap;
+}
+.custom-field {
+  font-size: 14px;
+  position: relative;
+  --field-padding: 9px 12px;
+  border-top: 10px solid transparent;
+}
+.custom-field input {
+  border: 3px solid #ccc;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: var(--field-padding);
+  border-radius: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.custom-field .label {
+  position: absolute;
+  left: 12px;
+  top: 22px;
+  transform: translateY(-50%);
+  width: calc(100% - (12px * 2));
+  color: #aaa;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: 
+    top 0.3s ease,
+    color 0.3s ease,
+    font-size 0.3s ease;
+}
+.custom-field input:not(:placeholder-shown) + .label,
+.custom-field input:focus + .label {
+    top: -0px;
+    font-size: 11px;
+    font-weight: 500;
+    color: #222;
+    background-color: white;
+    padding: 0 5px;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+.custom-field input:focus {
+    border: 3px solid #ff884d;
+}
+.custom-field input:focus + .label {
+    color: #ff884d;
+    font-weight: 500;
 }

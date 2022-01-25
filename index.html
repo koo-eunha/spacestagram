@@ -4,9 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/bootstrap-datepicker.css"
+    />
     <link rel="stylesheet" type="text/css" href="css/nasa.css" />
     <link rel="stylesheet" type="text/css" href="css/loader.css" />
-    <link href="css/mobiscroll.jquery.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +19,7 @@
       rel="stylesheet"
     />
     <script src="js/jquery-3.6.0.js"></script>
-    <script src="js/mobiscroll.jquery.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/nasa.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
     <title>Spacestagram</title>
@@ -31,43 +36,33 @@
           <div class="circle"></div>
           <div class="circle"></div>
         </div>
-        <br><br>
+        <br /><br />
         <p><em>finding signal from outer space...</em></p>
-        <!-- finding your data from outer space... -->
       </div>
 
       <div id="imageSpace"></div>
 
-      <div id="demo-start-end"></div>
-      <div id="datepicker" class="mbsc-grid mbsc-no-padding fixedBottom">
-        <div class="mbsc-row">
-          <div id="start" class="mbsc-col-6">
-            <label>
-              Start
-              <input
-                id="demo-init-start"
-                mbsc-input
-                data-input-style="outline"
-                data-label-style="stacked"
-                placeholder="Start Date"
-              />
-            </label>
-          </div>
-          <div id="end" class="mbsc-col-6">
-            <label>
-              End
-              <input
-                id="demo-init-end"
-                mbsc-input
-                data-input-style="outline"
-                data-label-style="stacked"
-                placeholder="End Date"
-              />
-            </label>
-          </div>
+      <div id="datepicker" class="flex-parent fixedBottom">
+        <div class="dates flex-child custom-field">
+          <input
+            type="text"
+            id="start"
+            class="form-control"
+            placeholder="&nbsp;"
+          />
+          <label for="start" class="label">Start Date</label>
+        </div>
+
+        <div class="dates flex-child custom-field">
+          <input
+            type="text"
+            id="end"
+            class="form-control"
+            placeholder="&nbsp;"
+          />
+          <label for="end" class="label">End Date</label>
         </div>
       </div>
-      <!-- <footer></footer> -->
     </div>
   </body>
 </html>
