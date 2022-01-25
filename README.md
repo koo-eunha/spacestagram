@@ -14,3 +14,7 @@ Download the code, or you can view the hosted website on: https://koo-eunha.gith
 ### index.html
 This is the file you will open to view the website, if you have downloaded the ZIP file of the code.
 Make sure that none of the files are moved from its original folder location.
+
+## Library
+The datepicker library used in this project is from Bootstrap 3. The previous version of this project uses the trial version of Mobiscroll,
+but as the trial was expiring, the library used in the project was changed to Bootstrap.
