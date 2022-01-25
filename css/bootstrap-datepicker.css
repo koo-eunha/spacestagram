@@ -146,7 +146,7 @@
   color: #ff884d;
   font-weight: 600;
 }
-.datepicker table tr td.today:hover,
+/* .datepicker table tr td.today:hover,
 .datepicker table tr td.today:hover:hover,
 .datepicker table tr td.today.disabled:hover,
 .datepicker table tr td.today.disabled:hover:hover,
@@ -167,7 +167,7 @@
 .datepicker table tr td.today.disabled[disabled],
 .datepicker table tr td.today.disabled:hover[disabled] {
   background-color: #eee;
-}
+} */
 .datepicker table tr td.today:active,
 .datepicker table tr td.today:hover:active,
 .datepicker table tr td.today.disabled:active,
